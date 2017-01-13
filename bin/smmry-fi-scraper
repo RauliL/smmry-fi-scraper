@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+const scraper = require('../lib/scraper');
+
+
+process.argv.slice(2).forEach((url) => {
+  scraper(url).then((results) => {
+    process.stdout.write(`${results.summary}\n`);
+  })
+  .catch((error) => {
+    process.stderr.write(`ERROR: ${error}\n`);
+  });;
+});
