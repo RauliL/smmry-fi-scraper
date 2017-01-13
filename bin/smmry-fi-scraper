@@ -1,13 +1,23 @@
 #!/usr/bin/env node
 
-const scraper = require('../lib/scraper');
+const path = require('path');
+const fs = require('fs');
+const lib = path.join(path.dirname(fs.realpathSync(__filename)), '../lib');
+const scraper = require(`${lib}/scraper`);
 
 
-process.argv.slice(2).forEach((url) => {
-  scraper(url).then((results) => {
+if (process.argv.length !== 3) {
+  process.stderr.write(`usage: ${process.argv[1]} <url>\n`);
+  process.exit(1);
+}
+scraper(process.argv[2])
+  .then((results) => {
+    if (results.title) {
+      process.stdout.write(`${results.title}\n\n`);
+    }
     process.stdout.write(`${results.summary}\n`);
   })
   .catch((error) => {
-    process.stderr.write(`ERROR: ${error}\n`);
-  });;
-});
+    process.stderr.write(`${error}\n`);
+    process.exit(1);
+  });

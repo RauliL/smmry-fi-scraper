@@ -2,21 +2,28 @@
   "name": "smmry-fi-scraper",
   "version": "0.1.0",
   "description": "Scrapes summaries from Finnish web sites",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RauliL/smmry-fi-scraper.git"
-  },
+  "author": "Rauli Laine <rauli.laine@iki.fi>",
+  "license": "MIT",
   "keywords": [
     "summary",
     "tldr",
     "finnish"
   ],
-  "author": "Rauli Laine",
-  "license": "MIT",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RauliL/smmry-fi-scraper.git"
+  },
   "bugs": {
     "url": "https://github.com/RauliL/smmry-fi-scraper/issues"
   },
   "homepage": "https://github.com/RauliL/smmry-fi-scraper#readme",
+  "main": "./lib/scraper",
+  "bin": {
+    "smmry-fi-scraper": "./bin/smmry-fi-scraper"
+  },
   "dependencies": {
     "cheerio": "^0.22.0",
     "ent": "^2.2.0",
