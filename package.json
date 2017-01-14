@@ -10,7 +10,7 @@
     "finnish"
   ],
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=6.1.0"
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,7 @@
     "cheerio": "^0.22.0",
     "ent": "^2.2.0",
     "request": "^2.79.0",
-    "smmry-fi": "RauliL/smmry-fi",
+    "smmry-fi": "^0.1.0",
     "striptags": "^2.1.1"
   }
 }
