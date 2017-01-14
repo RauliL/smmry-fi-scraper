@@ -13,3 +13,4 @@ smmry-fi-scraper <url-to-article>
 * [Yle](http://yle.fi)
 * [Ilta-Sanomat](http://www.iltasanomat.fi)
 * [Turun Sanomat](http://www.ts.fi)
+* [Helsingin Sanomat](http://www.hs.fi)
